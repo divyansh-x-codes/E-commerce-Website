@@ -1,4 +1,4 @@
-// Toggle Dark/Light Theme
+
 const toggle = document.getElementById("themeToggle");
 if (toggle) {
   toggle.addEventListener("click", () => {
@@ -6,7 +6,6 @@ if (toggle) {
   });
 }
 
-// Dummy product data
 const products = [
   { id: 1, name: "Smartphone X10", price: 29999, img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800" },
   { id: 2, name: "Wireless Earbuds", price: 2499, img: "https://images.unsplash.com/photo-1585386959984-a4155223165a?w=800" },
@@ -14,7 +13,6 @@ const products = [
   { id: 4, name: "Gaming Laptop Z", price: 89999, img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800" },
 ];
 
-// Generate Products
 const grid = document.getElementById("productGrid");
 if (grid) {
   grid.innerHTML = products.map(p => `
@@ -27,7 +25,6 @@ if (grid) {
     </div>`).join("");
 }
 
-// Cart & Wishlist
 let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 let wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
 
