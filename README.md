@@ -30,7 +30,7 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
  **Clone the repository:**
 ```bash
-git clone 
+git clone https://github.com/divyansh-x-codes/E-commerce-Website.git
    
 
 
