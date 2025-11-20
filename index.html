@@ -1,51 +1,459 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dealify | Home</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marketly — Snapdeal-style Demo (HTML & CSS)</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-  <h1>Dealify</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="login.html">Login</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Find Best Deals, Everyday</h2>
-  <p>Shop Smart. Save More.</p>
-  <a href="products.html" class="btn">Shop Now</a>
-</section>
-
-<section class="section">
-  <h2>Trending Products</h2>
-  <div class="products">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80">
-      <h3>Smart Watch</h3>
-      <p>₹2499</p>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <img src="https://images.scalebranding.com/home-shop-logo-846db8c3-82fb-435d-af81-e3cb2f85a597.jpg" alt="logo">
+        <div class="brand-text">
+          <div class="brand-name">Marketly</div>
+          <div class="brand-sub">Handpicked deals</div>
+        </div>
+      </div>
+      <div class="searchbar">
+        <input id="search" placeholder="Search for products, brands and more">
+        <button type="button">Search</button>
+      </div>
+      <nav class="header-actions">
+        <a class="link" href="#">Sign in</a>
+        <a class="link" href="#">Cart (0)</a>
+      </nav>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1585386959984-a4155223162f?auto=format&fit=crop&w=600&q=80">
-      <h3>Bluetooth Headphones</h3>
-      <p>₹1999</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1585386959984-a4155223162f?auto=format&fit=crop&w=600&q=80">
-      <h3>Gaming Mouse</h3>
-      <p>₹999</p>
-    </div>
-  </div>
-</section>
 
-<footer>© 2025 Dealify. All rights reserved.</footer>
+    <nav class="wrap main-nav">
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#">Mobiles</a>
+      <a class="nav-link" href="#">Electronics</a>
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#">Fashion</a>
+      <a class="nav-link" href="#">Appliances</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-left">
+        <h1>Big Daily Deals — Best prices on top brands</h1>
+       
+        <div class="hero-ctas">
+          <a class="btn primary" href="#products">Shop Now</a>
+          <a class="btn ghost" href="#categories">Categories</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img class="hero-img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fscalebranding.com%2Fproduct%2F283113&psig=AOvVaw3LMxHMjNF-iiymrkv_1JUO&ust=1763752385714000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNDaqea3gZEDFQAAAAAdAAAAABAL" alt="featured">
+      </div>
+    </section>
+
+    <section class="wrap categories" id="categories">
+      <div class="cat">Mobiles</div>
+      <div class="cat">Electronics</div>
+      <div class="cat">Home</div>
+      <div class="cat">Fashion</div>
+      <div class="cat">Appliances</div>
+      <div class="cat">Best Offers</div>
+    </section>
+
+    <section class="container wrap layout">
+      <aside class="filters">
+        <h3>Filters</h3>
+        <div class="filter-block">
+          <label>Price</label>
+          <div class="fake-range">₹0 - ₹5000</div>
+        </div>
+        <div class="filter-block">
+          <label>Brand</label>
+          <label class="chk"><input type="checkbox"> Brand A</label>
+          <label class="chk"><input type="checkbox"> Brand B</label>
+          <label class="chk"><input type="checkbox"> Brand C</label>
+        </div>
+        <div class="filter-block">
+          <label>Rating</label>
+          <div class="fake-range">4★ & up</div>
+        </div>
+        
+      </aside>
+
+      <section class="products-area">
+        <h2 id="products">Top picks for you</h2>
+
+        <div class="products-grid">
+         
+          <div class="product-card">
+            <span class="badge">Save 25%</span>
+            <div class="thumb"><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS-WBfHCrPj2dtFh1TT-g6vKLC8hFdUIhw0PK49LTzXhSFRBEa8R5ZW9SqCfljZYGJvc8N00TcokHehsf8El7zTqXSun2iCXpd-ZVZCLcR93t_RNPjcVM1_OQ" alt="product"></div>
+            <h3>Wireless Headphones Pro</h3>
+            <div class="muted">Brand A • 1-year warranty</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹1,899</div>
+                <div class="old">₹2,499</div>
+              </div>
+              <label for="q1" class="quick">Quick view</label>
+            </div>
+
+            <input id="q1" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="https://temptindia.com/cdn/shop/files/Artboard1_3adff1c4-550f-4c4d-ab5d-674c74b8e68a.png?v=1727173896" alt="">
+                <div>
+                  <h3>Wireless Headphones Pro</h3>
+                  <p class="muted">Crisp sound, long battery life, fast charging.</p>
+                  <p class="price">₹1,899 <span class="old">₹2,499</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy Now</a>
+                    <label for="q1" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://zonealpha.in/cdn/shop/files/ChatGPTImageJun25_2025_01_14_16PMcopy.png?v=1750837656" alt="product"></div>
+            <h3>Smartwatch X</h3>
+            <div class="muted">Brand B</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹2,499</div>
+                <div class="old">₹3,199</div>
+              </div>
+              <label for="q2" class="quick">Quick view</label>
+            </div>
+
+            <input id="q2" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="https://raipurshop.com/wp-content/uploads/2020/07/Black-colour-mini-bluetooth-speaker-with-aux-wire-and-cable.jpg" alt="">
+                <div>
+                  <h3>Smartwatch X</h3>
+                  <p class="muted">Fitness tracking, AMOLED display, water resistant.</p>
+                  <p class="price">₹2,499 <span class="old">₹3,199</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q2" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://m.media-amazon.com/images/I/418SigfmUnL.jpg" alt="product"></div>
+            <h3>Portable Speaker Mini</h3>
+            <div class="muted">Brand C</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹899</div>
+                <div class="old">₹1,199</div>
+              </div>
+              <label for="q3" class="quick">Quick view</label>
+            </div>
+
+            <input id="q3" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="https://oasis.opstatics.com/content/dam/oasis/page/2021/new-navi/eu/pc/Buds_Z.png" alt="">
+                <div>
+                  <h3>Portable Speaker Mini</h3>
+                  <p class="muted">Compact sound with punchy bass — ideal for travel.</p>
+                  <p class="price">₹899 <span class="old">₹1,199</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q3" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSqYedRs2RG2MvqrncWKz6aNn25IoqqUUYUAYTYA70W-oysZjgD8naaA9FV4VmjTZ9J61dkkISYykAshWnsVFXcU8-Zq_3bVj0wiCbcxQ6B" alt="product"></div>
+            <h3>Power Bank 20000mAh</h3>
+            <div class="muted">Brand D</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹1,299</div>
+                <div class="old">₹1,599</div>
+              </div>
+              <label for="q4" class="quick">Quick view</label>
+            </div>
+
+            <input id="q4" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSqYedRs2RG2MvqrncWKz6aNn25IoqqUUYUAYTYA70W-oysZjgD8naaA9FV4VmjTZ9J61dkkISYykAshWnsVFXcU8-Zq_3bVj0wiCbcxQ6B" alt="">
+                <div>
+                  <h3>Power Bank 20000mAh</h3>
+                  <p class="muted">Fast charge, multiple outputs, compact design.</p>
+                  <p class="price">₹1,299 <span class="old">₹1,599</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q4" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://image01.oneplus.net/ebp/202010/15/1-m00-1b-89-rb8lb1-ikvoax62naagomqfpe0c777.png" alt="product"></div>
+            <h3>Bluetooth Earbuds Z</h3>
+            <div class="muted">Brand E</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹999</div>
+                <div class="old">₹1,399</div>
+              </div>
+              <label for="q5" class="quick">Quick view</label>
+            </div>
+
+            <input id="q5" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MU2G3?wid=4000&hei=3000&fmt=jpeg&qlt=90&.v=1693236163178" alt="">
+                <div>
+                  <h3>Bluetooth Earbuds Z</h3>
+                  <p class="muted">True wireless, clear mic, compact case.</p>
+                  <p class="price">₹999 <span class="old">₹1,399</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q5" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://i02.appmifile.com/mi-com-product/fly-birds/redmi-smart-band-2/m/35677a3cda78d911e990fbf0bdcd82de.jpg" alt="product"></div>
+            <h3>Fitness Band V2</h3>
+            <div class="muted">Brand F</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹1,149</div>
+                <div class="old">₹1,499</div>
+              </div>
+              <label for="q6" class="quick">Quick view</label>
+            </div>
+
+            <input id="q6" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="/mnt/data/0a05b901-9af2-4fd5-80f3-f27d4a064fe1.png" alt="">
+                <div>
+                  <h3>Fitness Band V2</h3>
+                  <p class="muted">Heart-rate, step count, sleep monitor.</p>
+                  <p class="price">₹1,149 <span class="old">₹1,499</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q6" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://m.media-amazon.com/images/I/61QPRxJk3dL.jpg" alt="product"></div>
+            <h3>LED Desk Lamp</h3>
+            <div class="muted">Brand G</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹599</div>
+                <div class="old">₹799</div>
+              </div>
+              <label for="q7" class="quick">Quick view</label>
+            </div>
+
+            <input id="q7" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="/mnt/data/0a05b901-9af2-4fd5-80f3-f27d4a064fe1.png" alt="">
+                <div>
+                  <h3>LED Desk Lamp</h3>
+                  <p class="muted">Adjustable brightness and angle.</p>
+                  <p class="price">₹599 <span class="old">₹799</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q7" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRE83kOLzVB-ulU350rU-IB5OLTnF8fu1ie8svmhVnONoeIsao5fgtn4O3DJPHEP70EZlt2MmC5loAJCoy0_X46MbmcYsGNPAjBoggVPP9QtNJxXNZH7q4-2_0" alt="product"></div>
+            <h3>USB-C Cable (2m)</h3>
+            <div class="muted">Brand H</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹199</div>
+                <div class="old">₹299</div>
+              </div>
+              <label for="q8" class="quick">Quick view</label>
+            </div>
+
+            <input id="q8" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="/mnt/data/0a05b901-9af2-4fd5-80f3-f27d4a064fe1.png" alt="">
+                <div>
+                  <h3>USB-C Cable (2m)</h3>
+                  <p class="muted">Durable braided cable, fast charging.</p>
+                  <p class="price">₹199 <span class="old">₹299</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q8" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQgZUhbrnNNdt1Z2dgiKbMdOQygr4biIwUvRycHwRDMjXMTo7gVnx5vbmlQgZpjjfkoVc5YbjE7PBir-ubaTJkcBJjRLbOb2mqLpI67w3hIKbgH9hg7OnIfwg" alt="product"></div>
+            <h3>Wireless Charger Pad</h3>
+            <div class="muted">Brand I</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹799</div>
+                <div class="old">₹999</div>
+              </div>
+              <label for="q9" class="quick">Quick view</label>
+            </div>
+
+            <input id="q9" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="/mnt/data/0a05b901-9af2-4fd5-80f3-f27d4a064fe1.png" alt="">
+                <div>
+                  <h3>Wireless Charger Pad</h3>
+                  <p class="muted">Fast wireless charging, slim design.</p>
+                  <p class="price">₹799 <span class="old">₹999</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q9" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <div class="product-card">
+            <div class="thumb"><img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQC5jsB2XYlF_kRn_HbTDS_KFte4MX-3nM562M7Q3sxnd-NlLrYtxSIzRioX1hLl3J5Etdt33AZXL64u4WKEICO_5-EpQg6HfTCXiRjLpSS-wWJI0m3Dg7x" alt="product"></div>
+            <h3>Microphone Studio</h3>
+            <div class="muted">Brand J</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹2,199</div>
+                <div class="old">₹2,799</div>
+              </div>
+              <label for="q10" class="quick">Quick view</label>
+            </div>
+
+            <input id="q10" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="/mnt/data/0a05b901-9af2-4fd5-80f3-f27d4a064fe1.png" alt="">
+                <div>
+                  <h3>Microphone Studio</h3>
+                  <p class="muted">Clear audio pickup, good for streaming.</p>
+                  <p class="price">₹2,199 <span class="old">₹2,799</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q10" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQv8GOPZli6Xqh5DnOMdaz9jMrWxZR8sy4ylfs2_I1lhgkaIXHjhBwBlZQrqlxXT4kqeQGSAuI6RvKioowV4PNxEl0WiO91DbxvyuPzliCTQhtm9ow5VpgV" alt="product"></div>
+            <h3>Travel Backpack</h3>
+            <div class="muted">Brand K</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹1,499</div>
+                <div class="old">₹1,999</div>
+              </div>
+              <label for="q11" class="quick">Quick view</label>
+            </div>
+
+            <input id="q11" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="/mnt/data/0a05b901-9af2-4fd5-80f3-f27d4a064fe1.png" alt="">
+                <div>
+                  <h3>Travel Backpack</h3>
+                  <p class="muted">Water-resistant, laptop compartment, roomy.</p>
+                  <p class="price">₹1,499 <span class="old">₹1,999</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q11" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="thumb"><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTnJWbyqnFkNRxvvS9fxDZDugEbn9IgXJt1j6UGaBCme0MuAdkmHtuvmzxY4tZR8lBwhXlOKMF4fjjF6WbvWn-fvZ8jb6ZA_bv4fL1mVpWI3MFmyWiDft0K" alt="product"></div>
+            <h3>Car Phone Mount</h3>
+            <div class="muted">Brand L</div>
+            <div class="card-bottom">
+              <div>
+                <div class="price">₹249</div>
+                <div class="old">₹399</div>
+              </div>
+              <label for="q12" class="quick">Quick view</label>
+            </div>
+
+            <input id="q12" class="modal-toggle" type="checkbox">
+            <div class="modal">
+              <div class="modal-card">
+                <img src="/mnt/data/0a05b901-9af2-4fd5-80f3-f27d4a064fe1.png" alt="">
+                <div>
+                  <h3>Car Phone Mount</h3>
+                  <p class="muted">Strong grip, easy one-hand use.</p>
+                  <p class="price">₹249 <span class="old">₹399</span></p>
+                  <div class="modal-actions">
+                    <a class="btn primary" href="#">Buy</a>
+                    <label for="q12" class="btn ghost">Close</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="more">
+          <a class="btn ghost" href="#">View more products</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="wrap info-row">
+      <div class="info">Free shipping over ₹999 • 7-day returns • Secure checkout</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong>Marketly</strong>
+        
+      </div>
+      <div class="muted">© 2025 Marketly</div>
+    </div>
+  </footer>
 </body>
 </html>
