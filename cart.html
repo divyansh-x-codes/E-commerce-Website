@@ -19,7 +19,8 @@
       </div>
       <nav class="header-actions">
         <a class="link" href="index.html">Home</a>
-        <a class="link" href="login.html">Sign in</a>
+        <a class="link" href="account.html">Profile</a>
+        <a class="link" href="cart.html">Cart (<span class="cart-count">0</span>)</a>
       </nav>
     </div>
   </header>
@@ -29,57 +30,17 @@
       
       <section class="cart-items">
         <h1>Your cart</h1>
-        <p class="muted small-muted">You have 2 items in your cart.</p>
+        <p class="muted small-muted" id="cart-note">your cart is ready </p>
 
-        
-        <div class="cart-item">
-          <div class="cart-thumb">
-            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS-WBfHCrPj2dtFh1TT-g6vKLC8hFdUIhw0PK49LTzXhSFRBEa8R5ZW9SqCfljZYGJvc8N00TcokHehsf8El7zTqXSun2iCXpd-ZVZCLcR93t_RNPjcVM1_OQ" alt="Wireless Headphones Pro">
-          </div>
-          <div class="cart-info">
-            <h3>Wireless Headphones Pro</h3>
-            <p class="muted">Brand A • Black</p>
-            <div class="cart-meta">
-              <span>Qty: 1</span>
-            </div>
-          </div>
-          <div class="cart-price-block">
-            <div class="price">₹1,899</div>
-            <div class="old">₹2,499</div>
-            <button class="cart-remove" type="button">Remove</button>
-          </div>
-        </div>
-
-        <div class="cart-item">
-          <div class="cart-thumb">
-            <img src="https://zonealpha.in/cdn/shop/files/ChatGPTImageJun25_2025_01_14_16PMcopy.png?v=1750837656" alt="Smartwatch X">
-          </div>
-          <div class="cart-info">
-            <h3>Smartwatch X</h3>
-            <p class="muted">Brand B • Blue strap</p>
-            <div class="cart-meta">
-              <span>Qty: 1</span>
-            </div>
-          </div>
-          <div class="cart-price-block">
-            <div class="price">₹2,499</div>
-            <div class="old">₹3,199</div>
-            <button class="cart-remove" type="button">Remove</button>
-          </div>
-        </div>
-
-        <p class="muted small-muted note">
-          isse jyada kaise smjhu sir nahi aara js impliment krna 
-    
-        </p>
+        <div id="cart-items-list"></div>
       </section>
 
-      <aside class="cart-summary">
+      <aside class="cart-summary" id="cart-summary">
         <h2>Order summary</h2>
 
         <div class="summary-row">
-          <span>Subtotal (2 items)</span>
-          <span>₹4,398</span>
+          <span>Subtotal (<span id="summary-items">0</span> items)</span>
+          <span id="summary-subtotal">₹0</span>
         </div>
         <div class="summary-row">
           <span>Shipping</span>
@@ -87,15 +48,15 @@
         </div>
         <div class="summary-row">
           <span>Discount</span>
-          <span>- ₹300</span>
+          <span id="summary-discount">₹0</span>
         </div>
 
         <div class="summary-total">
           <span>Total</span>
-          <span>₹4,098</span>
+          <span id="summary-total">₹0</span>
         </div>
 
-        <button class="btn primary summary-btn" type="button">
+        <button class="btn primary summary-btn" type="button" id="checkout-btn">
           Proceed to checkout
         </button>
 
@@ -114,5 +75,6 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
