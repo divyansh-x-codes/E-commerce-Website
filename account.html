@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Account | Marketly</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Extra styles only for this page */
+
+    .account-page {
+      padding: 28px 0 40px;
+    }
+
+    .account-layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .account-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .account-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .account-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .account-name {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .account-email {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .account-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .account-section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+
+    .account-section-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0 0 14px;
+    }
+
+    .orders-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .order-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 14px 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .order-id {
+      font-weight: 700;
+    }
+
+    .order-status {
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    .status-delivered {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status-processing {
+      background: #e0f2fe;
+      color: #075985;
+    }
+
+    .status-cancelled {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .order-meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .order-items {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .order-total {
+      font-weight: 800;
+    }
+
+    .order-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .btn.sm {
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .order-meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .account-card {
+        padding: 16px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <img src="https://images.scalebranding.com/home-shop-logo-846db8c3-82fb-435d-af81-e3cb2f85a597.jpg" alt="logo">
+        <div class="brand-text">
+          <div class="brand-name">Marketly</div>
+          <div class="brand-sub">Handpicked deals</div>
+        </div>
+      </div>
+      <nav class="header-actions">
+        <a class="link" href="index.html">Home</a>
+        <a class="link" href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="account-page">
+    <div class="wrap account-layout">
+
+      <!-- LEFT: Profile -->
+      <section class="account-card">
+        <div class="account-avatar">
+          <span>M</span>
+        </div>
+        <div class="account-name">Marketly User</div>
+        <div class="account-email">user@example.com</div>
+
+        <button class="btn ghost sm" type="button">Edit profile</button>
+
+        <div class="account-meta">
+          • Member since 2025<br>
+          • Default location: India<br>
+          • 3 orders placed
+        </div>
+      </section>
+
+   
+      <section>
+        <h1 class="account-section-title">My orders</h1>
+        <p class="account-section-sub">
+          Track your recent purchases, check order status, and reorder your favourites.
+        </p>
+
+        <div class="orders-list">
+
+  
+          <article class="order-card">
+            <div class="order-header">
+              <div>
+                <div class="order-id">Order 1</div>
+                <div class="order-date muted">Placed on 04 Dec 2025</div>
+              </div>
+              <div class="order-status status-delivered">Delivered</div>
+            </div>
+
+            <div class="order-meta-row">
+              <div class="order-items">
+                Wireless Headphones Pro ×1, Smartwatch X ×1
+              </div>
+              <div class="order-total">
+                Total: ₹4,398
+              </div>
+            </div>
+
+            <div class="order-actions">
+              <button class="btn ghost sm" type="button">View details</button>
+              <button class="btn primary sm" type="button">Buy again</button>
+            </div>
+          </article>
+
+          <article class="order-card">
+            <div class="order-header">
+              <div>
+                <div class="order-id">Order 2</div>
+                <div class="order-date muted">Placed on 25 Nov 2025</div>
+              </div>
+              <div class="order-status status-processing">Processing</div>
+            </div>
+
+            <div class="order-meta-row">
+              <div class="order-items">
+                Travel Backpack ×1, Power Bank 20000mAh ×1
+              </div>
+              <div class="order-total">
+                Total: ₹2,798
+              </div>
+            </div>
+
+            <div class="order-actions">
+              <button class="btn ghost sm" type="button">View details</button>
+              <button class="btn ghost sm" type="button">Cancel order</button>
+            </div>
+          </article>
+
+          <!-- Order 3 -->
+          <article class="order-card">
+            <div class="order-header">
+              <div>
+                <div class="order-id">Order 3</div>
+                <div class="order-date muted">Placed on 10 Nov 2025</div>
+              </div>
+              <div class="order-status status-cancelled">Cancelled</div>
+            </div>
+
+            <div class="order-meta-row">
+              <div class="order-items">
+                Bluetooth Earbuds Z ×1
+              </div>
+              <div class="order-total">
+                Total: ₹999
+              </div>
+            </div>
+
+            <div class="order-actions">
+              <button class="btn ghost sm" type="button">View details</button>
+              <button class="btn primary sm" type="button">Buy again</button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div><strong>Marketly</strong></div>
+      <div class="muted">© 2025 Marketly</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
